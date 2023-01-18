@@ -1,0 +1,59 @@
+extends template
+block variables
+	-var title = 'Главная'
+
+block content
+	.intro
+		.overflow
+		.container 
+			.intro__inner
+				h1.intro__title Россия богата на прекрасные природные места, которые обязательно стоит увидеть своими глазами
+				button.intro__button узнать больше
+
+	section.section
+		.container
+			.about
+				img(src="../img/about1.jpg")
+				p.about__text Заповедники России разбросаны по всем регионам страны. Флора и фауна в заповедниках традиционно богаты на количество видов. Часто отдельные экземпляры имеют ограниченный ареал распространения или занесены в число исчезающих. В некоторые природные зоны непросто добраться, а посещение других и вовсе запретное дело. Но некоторые из них можно посетить. Так более 30 заповедников России относятся к числу биосферных резерватов
+	
+	section.section
+		.container
+			.section__header
+				h3.section__suptitle Проект 
+					span Восток
+				h2.section__title Наша 
+					span команда
+
+			.our-command
+				img(src="https://i0.wp.com/seashepherd.org/wp-content/uploads/2022/09/Mark-Gibbs-Farley-Captain.jpg?w=533&ssl=1 533w, https://i0.wp.com/seashepherd.org/wp-content/uploads/2022/09/Mark-Gibbs-Farley-Captain.jpg?resize=240%2C300&ssl=1 240w")
+				.our-command__text
+					span.our-command__span "
+					p.our-command__text__about-me I have been working in the marine research and conservation sector for 35 years as a vessel master, researcher leader and operations leader. Joining Sea Shepherd was a natural fit for me and now having been the master of most of the Sea Shepherd vessels on a range of campaigns, I feel the need and importance of our work continues to increase. Making change requires participation and efforts from a range of sources. Community members need to generate grass-roots momentum. The research community needs to generate the defensible evidence for change. Policy developers and implementers need work the system from the inside. Front line compliance operations need to enforce the regulations and treaties. All are needed to achieve change. Sea Shepherd operates across all of these sectors through providing vessels for researchers, leading and supporting compliance operations, and generating grass-roots momentum. This is why the organisation has been so effective. 
+					p.our-command__text__fio Mark Gibbs
+	
+	section.section
+		.container
+			.section__header
+				h3.section__suptitle Из недавних
+				h2.section__title Наши последние 
+					span новости
+			
+			.section__gallery
+				.section__gallery__container
+					img(src="../img/dayOfEarth.jpg")
+					h3.section__gallery__container__title Каждый год 22 апреля отмечается не просто большой, а поистине глобальный праздник — Международный день Матери-Земли.
+				.section__gallery__container
+					img(src="../img/newHelpers.jpg")
+					h3.section__gallery__container__title Пять заповедников, где ждут волонтеров - Каждому из 90 российских заповедников, национальных парков и заказников нужны добровольцы.
+				.section__gallery__container
+					img(src="https://i0.wp.com/seashepherd.org/wp-content/uploads/2022/10/22_10_21-M9-Navy-Approaching-Panga-4.jpg?fit=1024%2C683&ssl=1")
+					h3.section__gallery__container__title Direct Action: Sea Shepherd Working with the Mexican Navy to Remove Illegal Nets And Protect the Vaquita
+
+	section.section
+		.container
+			.section__header
+				h3.section__suptitle Проект восток в действии
+				h2.section__title Недавние 
+					span видеоотчёты
+			.video-block
+				video(src="https://stepik.org/media/attachments/course/114064/playback.mp4" controls)

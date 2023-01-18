@@ -1,0 +1,56 @@
+block variables
+
+block mixins
+	mixin createHeader(linkPairs = {'No' : '#'})
+		each key, value in linkPairs 
+			if value == title 
+				a.nav__link.active(href= "#")= value
+			else
+				a.nav__link(href= key)= value
+
+	mixin createFooter(linkPairs = {'No' : '#'})
+		each key, value in linkPairs 
+			if value == title 
+				a.footer__nav__link.active(href= "#")= value
+			else
+				a.footer__nav__link(href= key)= value
+
+doctype html
+html(lang="en")
+	head
+		title #{title}
+		link(rel="stylesheet" href="css/main.css")
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+	body
+		block header
+			header.header
+				.container
+					.header__inner 
+						nav.nav
+							+createHeader({'Главная':'index.html','О нас' : 'aboutUsPage.html', 'Новости' : '#', 'Природоохранные зоны' : 'tablePage.html', 'Стать волонтёром' : '#', 'Помочь нам' : '#'})
+					
+		block content
+		block outro
+			.outro
+				.overflow
+				.container
+					.outro__header
+						h3.outro__suptitle Узнайте об актуальных новостях первым
+						h2.outro__title Подпишитесь на нашу рассылку и будьте всегда вкурсе новостей 
+							span Проекта востока
+			
+					.outro__keep-us
+						h3.outro__keep-us__suptitle Узнай о новостях первым
+						form.outro__keep-us__inputs
+							input(type="text" placeholder="Имя")
+							input(type="text" placeholder="Фамилия")
+							input(type="text" placeholder="электронная почта")
+						button.outro__keep-us__button Подписаться
+		block footer
+			footer.footer
+				.footer__inner
+					nav.footer__nav
+						+createFooter({'Главная':'index.html','О нас' : 'aboutUsPage.html', 'Новости' : '#', 'Природоохранные зоны' : 'tablePage.html', 'Стать волонтёром' : '#', 'Помочь нам' : '#'})
+				
